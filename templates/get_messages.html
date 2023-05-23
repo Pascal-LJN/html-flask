@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>留言列表</title>
+  </head>
+  <body>
+    <a href="{{ url_for('index') }}">返回</a>
+    <hr>
+    <h1>留言列表</h1>
+    {% if messages %}
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    {% else %}
+      <p>目前还没有留言。</p>
+    {% endif %}
+  </body>
+</html>
